@@ -1,1 +1,3 @@
 kubeConfig: /Users/cemgoktugsorgun/Projects/cncf-demo/kubeconfig-dev.yaml
+tag: v0.0.1
+image: "index.docker.io/thedeveloperpotato/cncf-demo"
