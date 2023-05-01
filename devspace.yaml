@@ -3,9 +3,14 @@ name: cncf-demo
 pipelines:
   dev:
     run: |-
+      ytt --file ytt/schema.yaml --file ytt/resources --data-values-file ytt/values-dev.yaml | tee yaml/dev/app.yaml
       create_deployments --all
       start_dev app
-deployments: {}
+deployments:
+  app:
+    kubectl:
+      manifests:
+        - yaml/dev
 dev:
   app:
     labelSelector:
@@ -26,3 +31,6 @@ dev:
       - port: "8080"
     open:
       - url: http://localhost:8080
+images:
+  app:
+    image: index.docker.io/thedeveloperpotato/cncf-demo
