@@ -32,4 +32,4 @@ postgresql:
           export PGPASSWORD=$POSTGRES_PASSWORD
           psql -U postgres -c 'CREATE DATABASE "cncf-demo";'
 schemahero:
-  enabled: false
+  enabled: true
