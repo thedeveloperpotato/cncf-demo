@@ -2,10 +2,10 @@
 ---
 name: "cncf-demo"
 image:
-  repository: index.docker.io/vfarcic/cncf-demo
+  repository: index.docker.io/thedeveloperpotato/cncf-demo
   tag: latest
 ingress:
-  host: cncf-demo-dev.sillydemo.com
+  host: cncf-demo-dev.13.50.72.83.nip.io
   className: traefik
 tls:
   enabled: false
